@@ -11,6 +11,7 @@
         <i class="dot" :style="{background: item.color}"></i>
         <span>{{item.name}}</span>
       </li>
+      <li class="add"><Icon type="md-add-circle" /><span>添加</span></li>
     </ul>
     <div class="pr-sb-list-info">
       <Form :model="projectInfo" label-position="top">

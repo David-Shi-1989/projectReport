@@ -15,6 +15,7 @@
           <tr><p class="name">{{item.name}}</p></tr>
         </table>
       </li>
+      <li class="add"><Icon type="md-add-circle" /><span>添加</span></li>
     </ul>
     <div class="pr-sb-list-info">
       <Form :model="developerInfo" label-position="top">

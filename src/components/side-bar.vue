@@ -2,7 +2,7 @@
   <div class="pr-sb-wrap pr-height-full">
     <div class="pr-sb-header">项目管理系统</div>
     <div class="pr-sb-list">
-      <Tabs value="developer" class="pr-height-full">
+      <Tabs value="project" class="pr-height-full">
         <TabPane label="项目" name="project">
           <projectList></projectList>
         </TabPane>
@@ -38,6 +38,7 @@ export default {
   overflow: hidden;
   border-top-left-radius: @boder-radius;
   border-bottom-left-radius: @boder-radius;
+  box-shadow: 0 0 10px #ccc;
   .pr-sb-header {
     width: 100%;
     height: @header-height;
