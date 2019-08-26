@@ -6,13 +6,34 @@
         v-for="item in developerList"
         :key="item.id"
         @click="onDeveloperChange(item)"
-        :class="[item.isActive?'active':'']"
-      >
-        <div class="avatar" :style="{'background-image': `url('${item.avatar}')`}"></div>
-        <!-- <i class="dot" :style="{background: item.color}"></i> -->
-        <span>{{item.name}}</span>
+        :class="[item.isActive?'active':'']">
+        <table>
+          <tr>
+            <td rowspan="2" style="padding-right:10px;"><div class="avatar" :style="{'background-image': `url('${item.avatar}')`}"></div></td>
+            <td><p class="id">{{item.id}}</p></td>
+          </tr>
+          <tr><p class="name">{{item.name}}</p></tr>
+        </table>
       </li>
     </ul>
+    <div class="pr-sb-list-info">
+      <Form :model="developerInfo" label-position="top">
+        <FormItem label="姓名">
+          <Input type="text" v-model="developerInfo.name" />
+        </FormItem>
+        <FormItem label="工号">
+          <Input type="text" v-model="developerInfo.id" />
+        </FormItem>
+        <FormItem label="描述">
+          <Input
+            v-model="developerInfo.desc"
+            type="textarea"
+            :autosize="{minRows: 2,maxRows: 5}"
+            placeholder="Enter something..."
+          />
+        </FormItem>
+      </Form>
+    </div>
   </div>
 </template>
 
@@ -52,6 +73,7 @@ export default {
       this.developerInfo.name = item.name
       this.developerInfo.desc = item.desc
       this.developerList.forEach(pItem => (pItem.isActive = false))
+      // this.$set(item, 'isActive', true)
       item.isActive = true
     }
   }

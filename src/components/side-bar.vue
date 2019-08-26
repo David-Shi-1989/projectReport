@@ -3,7 +3,7 @@
     <div class="pr-sb-header">项目管理系统</div>
     <div class="pr-sb-list">
       <Tabs value="developer" class="pr-height-full">
-        <TabPane label="项目" name="project" class="pr-height-full">
+        <TabPane label="项目" name="project">
           <projectList></projectList>
         </TabPane>
         <TabPane label="人员" name="developer">
